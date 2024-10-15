@@ -6,6 +6,7 @@ int[] nums = { 1, 1, 2, 3, 5, 8 };
 
 foreach (int num in nums)
 {
+    if (num % 2 == 1)
     Console.WriteLine(num);
 }
 
