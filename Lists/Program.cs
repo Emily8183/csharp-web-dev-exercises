@@ -26,8 +26,6 @@ Console.WriteLine("Choose a length: ");
 string inputLength = Console.ReadLine();
 int intLength = int.Parse(inputLength);
 
-
-
 List<string> sample2 = new List<string>();
 
 sample2.Add("abcde");
