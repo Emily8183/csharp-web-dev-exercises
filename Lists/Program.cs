@@ -4,6 +4,7 @@
 
 using System.Numerics;
 
+//exercise 1: calculate the sum of the List sample
 List<int> sample = new List<int>();
 
 sample.Add(1);
@@ -22,22 +23,9 @@ sample.Add(11);
 int sum = CalSum(sample);
 Console.WriteLine("the sum is " + sum);
 
-Console.WriteLine("Choose a length: ");
-string inputLength = Console.ReadLine();
-int intLength = int.Parse(inputLength);
-
-List<string> sample2 = new List<string>();
-
-sample2.Add("abcde");
-sample2.Add("abcd2");
-sample2.Add("abd");
-
-//to call the PrintLetters function
-PrintLetters(sample2, intLength);
-
 static int CalSum(List<int> sample)
 {
-    int sum = 0; 
+    int sum = 0;
 
     for (int i = 0; i < sample.Count; i++)
     {
@@ -49,6 +37,24 @@ static int CalSum(List<int> sample)
 
     return sum;
 }
+
+//exercise 2: print out the string matching the required length
+
+Console.WriteLine("Choose a length: ");
+string inputLength = Console.ReadLine();
+int intLength = int.Parse(inputLength);
+
+string stringSample = "I would not, could not, in a box. I would not, could not with a fox.I will not eat them in a house. I will not eat them with a mouse.";
+
+List<string> sample2 = stringSample.Split(',').ToList();
+
+//List<string> sample2 = new List<string>();
+
+//sample2.Add("abcde");
+//sample2.Add("abcd2");
+//sample2.Add("abd");
+
+PrintLetters(sample2, intLength);
 
 static void PrintLetters(List<string> strings, int chosenLength)
 {
